@@ -1,0 +1,57 @@
+/* @tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+} */
+
+
+.isActive, .inActive {
+  padding: 5px 10px;
+  text-decoration: none;
+  margin: 0 5px;
+  /* color: #f1f1f1;
+  background: #202020a6; */
+  border-radius: 6px;
+  /* border: 1px solid black; */
+  transition: all 0.25s ease-in-out;
+}
+
+.isActive, .inActive:hover {
+  /* font-weight: bold; */
+  /* color: #f1f1f1;
+  background: #ff00c8; */
+  color: #f1f1f1;
+  background: #202020a6;
+}
+
+/* .inActive {
+  font-weight: 300;
+} */
