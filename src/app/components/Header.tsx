@@ -5,6 +5,7 @@ import { usePathname } from "next/navigation";
 const navLinks = [
     { name: "Home", href: "/" },
     { name: "Dashboard", href: "/dashboard" },
+    // { name: "Dashboard", href: "/dashboard/archived" },
     { name: "Blog", href: "/blog" },
     { name: "Products", href: "/products" },
     { name: "OrderProduct", href: "/order-product" },
@@ -13,7 +14,11 @@ const navLinks = [
     { name: "Register-Template", href: "/register-template" },
     { name: "Login-Template", href: "/login-template" },
     { name: "Forgot Password", href: "/forgot-password" },
+    { name: "Next.JS", href: "https://nextjs.org/", rel: "noopener noreferrer", target:"_blank" },
     { name: "Next.JS Tutorial", href: "https://www.youtube.com/playlist?list=PLC3y8-rFHvwjOKd6gdf4QtV1uYNiQnruI", rel: "noopener noreferrer", target:"_blank" },
+    { name: "NextJS GitHub", href: "https://github.com/gopinav/Next.js-14-Tutorials", rel: "noopener noreferrer", target:"_blank" },
+
+
 ];
 
 export default function Header() {
@@ -43,7 +48,8 @@ export default function Header() {
                                 rel={link.rel} 
                                 target={link.target} 
                                 // className={isActive ? "isActive" : "inActive"}
-                                className={`link ${pathName === link.href ? 'isActive' : 'inActive'}`}  
+                                // className={`link ${pathName === link.href ? 'isActive' : 'inActive'}`}  
+                                className={`${pathName === link.href ? 'isActive' : 'inActive'}`}
                             >
                                 {link.name} 
                             </Link>
