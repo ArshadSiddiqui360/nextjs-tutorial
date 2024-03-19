@@ -23,7 +23,8 @@ const navLinks = [
 
 export default function Header() {
 
-    const pathName = usePathname();
+    const pathname = usePathname();
+	// const isActive = (path: string) => path === pathname;
 
     return(
         <>
@@ -38,7 +39,9 @@ export default function Header() {
 
                 {
                     navLinks.map( (link) => {
-                    const isActive  = pathName.startsWith(link.href);
+                    
+                    // Method#1
+                    // const isActive  = pathName.startsWith(link.href);
 
                     return (
                         <>
@@ -47,9 +50,12 @@ export default function Header() {
                                 key={link.name}
                                 rel={link.rel} 
                                 target={link.target} 
-                                // className={isActive ? "isActive" : "inActive"}
-                                // className={`link ${pathName === link.href ? 'isActive' : 'inActive'}`}  
-                                className={`${pathName === link.href ? 'isActive' : 'inActive'}`}
+                                // Method#1
+                                // className={isActive ? "isActive" : ""}
+                                // Method#2
+                                className={`link ${pathname === link.href ? 'isActive' : ''}`} 
+                                // Method#3
+                                // className={`link ${isActive(link.href) ? 'isActive' : ''}`}  
                             >
                                 {link.name} 
                             </Link>

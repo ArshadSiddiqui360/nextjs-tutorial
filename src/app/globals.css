@@ -33,7 +33,7 @@ body {
 } */
 
 
-.isActive, .inActive {
+.isActive, .link {
   padding: 5px 10px;
   text-decoration: none;
   margin: 0 5px;
@@ -44,7 +44,7 @@ body {
   transition: all 0.25s ease-in-out;
 }
 
-.isActive, .inActive:hover {
+.isActive, .link:hover {
   /* font-weight: bold; */
   /* color: #f1f1f1;
   background: #ff00c8; */
@@ -52,6 +52,6 @@ body {
   background: #202020a6;
 }
 
-/* .inActive {
+/* .link {
   font-weight: 300;
 } */
