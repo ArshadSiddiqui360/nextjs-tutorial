@@ -36,6 +36,7 @@ export default function Header() {
             >
 
                 <h2>Header</h2>
+                <nav>
 
                 {
                     navLinks.map( (link) => {
@@ -44,7 +45,7 @@ export default function Header() {
                     // const isActive  = pathName.startsWith(link.href);
 
                     return (
-                        <>
+
                             <Link
                                 href={link.href}
                                 key={link.name}
@@ -60,18 +61,16 @@ export default function Header() {
                                 {link.name} 
                             </Link>
 
-                            {/* <Link href="https://www.youtube.com/playlist?list=PLC3y8-rFHvwjOKd6gdf4QtV1uYNiQnruI" legacyBehavior>
-                                <a target="_blank" rel="noopener noreferrer">Next.JS Tutorial</a>
-                            </Link> */}
+                        //    <Link href="https://www.youtube.com/playlist?list=PLC3y8-rFHvwjOKd6gdf4QtV1uYNiQnruI" legacyBehavior>
+                        //         <a target="_blank" rel="noopener noreferrer" key={link.name}>Next.JS Tutorial</a>
+                        //     </Link>
 
-                            {/* <a href="https://www.youtube.com/playlist?list=PLC3y8-rFHvwjOKd6gdf4QtV1uYNiQnruI" target="_blank" rel="noopener noreferrer">Next.JS Tutorial</a> */}
-                        </>
-                        
-                        
+                        //     <a href="https://www.youtube.com/playlist?list=PLC3y8-rFHvwjOKd6gdf4QtV1uYNiQnruI" target="_blank" rel="noopener noreferrer">Next.JS Tutorial</a>                   
                         
                     )
                     } )
                 }
+                </nav>
 
             </header>
         </>
