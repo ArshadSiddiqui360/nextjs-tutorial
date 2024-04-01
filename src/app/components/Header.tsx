@@ -9,6 +9,7 @@ const navLinks = [
     { name: "Blog", href: "/blog" },
     { name: "Products", href: "/products" },
     { name: "OrderProduct", href: "/order-product" },
+    { name: "Phone", href: "/routes/restapi" },
     { name: "Register", href: "/register" },
     { name: "Login", href: "/login" },
     { name: "Register-Template", href: "/register-template" },
