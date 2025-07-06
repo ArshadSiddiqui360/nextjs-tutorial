@@ -5,7 +5,7 @@ export const metadata: Metadata = {
         default: 'About Me',
         template: '%s | HealthCare Biodiversity'
     },
-    description: 'This is the aout page',
+    description: 'This is the about page',
     referrer: 'origin-when-cross-origin',
     keywords: ['Next.js', 'React', 'JavaScript', 'mascreation.tech', 'Arshad Siddiqui'],
     authors: [

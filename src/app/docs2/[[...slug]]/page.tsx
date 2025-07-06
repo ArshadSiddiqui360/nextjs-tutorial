@@ -1,18 +1,26 @@
-export default function Docs( { params }: {
-    params: {
-        slug: string[];
-    };
+export default async function DocsPage({
+  params,
+}: {
+  params: Promise<{ slug?: string[] }>;
 }) {
+  const { slug = [] } = await params;
 
-    {
-        if (params.slug?.length === 2) {
-            return <h1>
-                Viewing docs for feature {params.slug[0]} and concept {params.slug[1]}
-            </h1>
-        } else if (params.slug?.length === 1) {
-            return <h1>Viewing docs for feature {params.slug[0]}</h1>
-        }
-    }
-    
-    return <h1>Docs home page</h1>
+  if (slug.length === 0) {
+    return <h1>Docs Home</h1>;
+  }
+
+  return <h1>Viewing: {slug.join(' / ')}</h1>;
+}
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ slug?: string[] }>;
+}) {
+  const { slug = [] } = await params;
+
+  return {
+    title: slug.length > 0 ? `Docs - ${slug.join(' / ')}` : 'Docs',
+    description: `You're viewing the documentation for ${slug.join(' → ') || 'home'}.`,
+  };
 }
