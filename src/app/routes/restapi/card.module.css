@@ -3,9 +3,10 @@
     flex-wrap: wrap;
     gap: 1.5rem;
     justify-content: center;
+    padding-block: 20px;
     margin: 1.5rem;
-    
-    
+    max-height: calc(100vh - 135px);
+    overflow-y: auto;
 }
 
 .card {
